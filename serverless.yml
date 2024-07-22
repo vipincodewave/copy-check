@@ -1,0 +1,15 @@
+service: vipinexpress
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  memorySize: 2048 # set the maximum memory of the Lambdas in Megabytes
+  timeout: 30 # the timeout is 10 seconds (default is 6 seconds)
+  region: ap-south-1
+  stage: dev
+functions:
+  api:
+    handler: index.run
+    events:
+      - httpApi: '*'
