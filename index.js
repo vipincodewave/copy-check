@@ -14,7 +14,7 @@ app.get("/path", (req, res, next) => {
   });
 });
 
-app.get("/paths", (req, res, next) => {
+app.get("/pathss", (req, res, next) => {
   return res.status(200).json({
     message: "Hello from path!",
   });
