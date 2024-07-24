@@ -9,6 +9,7 @@ app.get("/", (req, res, next) => {
 });
 
 app.get("/path", (req, res, next) => {
+  console.log("hello from root")
   return res.status(200).json({
     message: "Hello from path!",
   });
