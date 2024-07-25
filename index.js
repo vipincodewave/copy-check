@@ -22,6 +22,13 @@ app.get("/pathss", (req, res, next) => {
   })
 });
 
+app.get("/hello-world", (req, res, next) => {
+  return res.status(200).json({
+    message: "Hello from hello!",
+  });
+});
+
+
 app.use((req, res, next) => {
   return res.status(404).json({
     error: "Not Found",
