@@ -9,20 +9,17 @@ app.get("/", (req, res, next) => {
 });
 
 app.get("/path", (req, res, next) => {
-  console.log("hello from root")
   return res.status(200).json({
     message: "Hello from path!",
   });
 });
 
 app.get("/pathss", (req, res, next) => {
-  if(1===1){
-    return res.status(200).json({
-      message: "Hello from pathss!",
-      statusCode: 200,
-      statusCodeDescription: "OK"
-    })
-  }
+  return res.status(200).json({
+    message: "Hello from paths!",
+    statusCode: 200,
+    statusCodeDescription: "OK"
+  })
 });
 
 app.use((req, res, next) => {
