@@ -37,13 +37,6 @@ app.post("/hello-world/:id", (req, res, next) => {
   });
 });
 
-app.post("/hell/:id", (req, res, next) => {
-  const requestBody = req.body
-  return res.status(201).json({
-    message: "Hello from hi!",
-    data:requestBody
-  });
-});
 
 app.use((req, res, next) => {
   return res.status(404).json({
