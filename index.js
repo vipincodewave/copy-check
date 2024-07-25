@@ -36,10 +36,10 @@ app.post("/hello-world/:id", (req, res, next) => {
   });
 });
 
-app.post("/hello/:id", (req, res, next) => {
+app.post("/hell/:id", (req, res, next) => {
   const requestBody = req.body
-  return res.status(200).json({
-    message: "Hello from hello!",
+  return res.status(201).json({
+    message: "Hello from hi!",
     data:requestBody
   });
 });
