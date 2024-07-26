@@ -28,13 +28,8 @@ app.get("/hello-world", (req, res, next) => {
   });
 });
 
-
-app.post("/hello-world/:id", (req, res, next) => {
-  const requestBody = req.body
-  return res.status(200).json({
-    message: "Hello from hello!",
-    data:requestBody
-  });
+app.get("/custom-error", (req, res, next) => {
+  throw new Error("This is a custom error");
 });
 
 
