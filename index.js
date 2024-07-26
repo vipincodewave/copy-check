@@ -50,7 +50,7 @@ app.get("/custom-error", (req, res, next) => {
 
 app.get('/custom-error/:id', (req, res, next) => {
   const id = parseInt(req.params.id);
-  if (isNaN(id)) {
+  if (Number.isNaN(id)) {
     throw new Error("Invalid id");
   }
   return res.status(200).json({
